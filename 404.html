@@ -8,11 +8,15 @@
 <title>404 — Page Not Found | Bashir Amri</title>
 <meta name="description" content="This page could not be found. Return to Bashir Amri's homepage.">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&family=DM+Sans:wght@400;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700;900&display=swap');
+@font-face{font-family:'Alibaba';src:url('/fonts/Alibaba-Light.ttf') format('truetype');font-style:normal;font-weight:300;font-display:swap}
+@font-face{font-family:'Alibaba';src:url('/fonts/Alibaba-Regular.ttf') format('truetype');font-style:normal;font-weight:400;font-display:swap}
+@font-face{font-family:'Alibaba';src:url('/fonts/Alibaba-Bold.ttf') format('truetype');font-style:normal;font-weight:700;font-display:swap}
+@font-face{font-family:'Alibaba';src:url('/fonts/Alibaba-Black.ttf') format('truetype');font-style:normal;font-weight:900;font-display:swap}
 :root{color-scheme:dark;--green:#00ff78;--bg:#020806;--ink:#effff5;--muted:#a0b5a9}
 *{box-sizing:border-box}
 html{min-height:100%;background:var(--bg)}
-body{margin:0;min-height:100svh;background:radial-gradient(ellipse at 50% 32%,#07341d 0%,#020806 55%,#000 100%);color:var(--ink);font-family:'Vazirmatn',Tahoma,sans-serif;overflow-x:hidden}
+body{margin:0;min-height:100svh;background:radial-gradient(ellipse at 50% 32%,#07341d 0%,#020806 55%,#000 100%);color:var(--ink);font-family:'Alibaba',Tahoma,sans-serif;overflow-x:hidden}
 body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.16;background:repeating-linear-gradient(0deg,transparent 0 3px,#00ff781c 4px 5px);z-index:4}
 body:after{content:"";position:fixed;inset:0;pointer-events:none;background:linear-gradient(90deg,transparent 49.9%,#00ff7812 50%,transparent 50.1%),linear-gradient(transparent 49.9%,#00ff7810 50%,transparent 50.1%);background-size:54px 54px;mask-image:linear-gradient(transparent 20%,#000 100%);opacity:.4}
 main{position:relative;z-index:2;min-height:100svh;display:flex;align-items:center;justify-content:center;padding:55px 20px 70px}
@@ -22,12 +26,12 @@ main{position:relative;z-index:2;min-height:100svh;display:flex;align-items:cent
 .number:before,.number:after{content:attr(data-text);position:absolute;inset:0;pointer-events:none}
 .number:before{color:var(--green);clip-path:inset(24% 0 64% 0);transform:translate(6px,-2px);animation:tear 4s steps(1,end) infinite}
 .number:after{color:#caffdd;clip-path:inset(72% 0 16% 0);transform:translate(-5px,3px);animation:tear 3.3s steps(1,end) infinite reverse}
-h1{font-size:clamp(26px,5vw,40px);margin:0 0 20px;font-weight:700;letter-spacing:-.03em}
+h1{font-family:'DM Sans',sans-serif;font-size:clamp(26px,5vw,40px);margin:0 0 20px;font-weight:700;letter-spacing:-.03em}
 .desc{font-size:14px;color:var(--muted);line-height:2;margin:0 auto;max-width:680px}
-.fa{direction:rtl;font-size:15px;line-height:2.1;color:#d5e9db;margin:0 auto;max-width:650px}
+.fa{font-family:'Alibaba',Tahoma,sans-serif;font-weight:400;direction:rtl;font-size:15px;line-height:2.1;color:#d5e9db;margin:0 auto;max-width:650px}
 .english-title{font:600 17px/1.6 "DM Sans",sans-serif;color:var(--green);margin:0 0 10px}.english-desc{margin-top:14px;padding-top:14px;border-top:1px solid #00ff7830;font:400 13px/1.8 "DM Sans",sans-serif;color:#a9cbb6}.explanation{border:1px solid #00ff7866;background:#001b1088;padding:22px 28px;margin:28px auto 0;max-width:760px;box-shadow:0 0 24px #00ff7814;border-radius:22px}
 .actions{display:flex;justify-content:center;flex-wrap:wrap;gap:14px;margin-top:36px;direction:rtl}
-.btn{min-width:185px;min-height:54px;display:inline-flex;align-items:center;justify-content:center;padding:13px 24px;text-decoration:none;font:600 15px 'Vazirmatn',Tahoma,sans-serif;transition:transform .2s,box-shadow .2s,background .2s;border:1px solid var(--green);color:#f2fff6;background:#00180d;border-radius:999px;white-space:nowrap}
+.btn{min-width:185px;min-height:54px;display:inline-flex;align-items:center;justify-content:center;padding:13px 24px;text-decoration:none;font:700 15px 'Alibaba',Tahoma,sans-serif;transition:transform .2s,box-shadow .2s,background .2s;border:1px solid var(--green);color:#f2fff6;background:#00180d;border-radius:999px;white-space:nowrap}
 .btn{flex-direction:column;gap:1px}.btn small{font:500 10px/1.2 "DM Sans",sans-serif;opacity:.78}.btn:hover,.btn:focus-visible{transform:translateY(-3px);box-shadow:0 0 25px #00ff7866;background:#064b2b;outline:2px solid var(--green);outline-offset:3px}
 .primary{background:var(--green);color:#001609;box-shadow:0 0 24px #00ff7855}
 .primary:hover,.primary:focus-visible{background:#8dffbb;color:#001609}
@@ -35,7 +39,20 @@ footer{margin-top:55px;color:#508367;font:600 11px 'DM Sans',sans-serif;letter-s
 @keyframes appear{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
 @keyframes glitch{0%,94%,97%,100%{transform:translateX(0)}95%{transform:translateX(-3px)}96%{transform:translateX(4px)}}
 @keyframes tear{0%,90%,100%{opacity:0}91%,94%{opacity:1}92%{transform:translate(9px,-3px)}93%{transform:translate(-7px,3px)}}
-@media(max-width:600px){main{padding:44px 18px 50px}.number{margin:18px 0}.explanation{padding:18px 16px}.actions{flex-direction:row;flex-wrap:nowrap;gap:6px}.btn{flex:1 1 0;min-width:0;width:auto;padding:10px 4px;min-height:42px;font-size:clamp(10px,2.8vw,12px)}footer{margin-top:36px}}
+@media(max-width:600px){
+ main{padding:42px max(30px,env(safe-area-inset-right)) 62px max(30px,env(safe-area-inset-left))}
+ .panel{width:100%;max-width:480px}
+ .kicker{font-size:9px;letter-spacing:.18em}
+ .number{font-size:clamp(92px,24vw,132px);margin:12px 0 15px;letter-spacing:-.08em}
+ h1{font-size:clamp(19px,5vw,23px);margin-bottom:12px}
+ .english-title{font-size:clamp(12px,3.2vw,14px);line-height:1.65;max-width:290px}
+ .explanation{margin:19px auto 0;padding:14px 15px;border-radius:18px}
+ .fa{font-size:clamp(11px,3.1vw,13px);line-height:1.95}
+ .actions{flex-direction:row;flex-wrap:nowrap;gap:6px;margin-top:24px}
+ .btn{flex:1 1 0;min-width:0;width:auto;padding:7px 2px;min-height:44px;font-size:clamp(9px,2.7vw,11px)}
+ .btn small{font-size:clamp(8px,2.2vw,9px)}
+ footer{margin-top:35px;font-size:9px}
+}.number{margin:18px 0}.explanation{padding:18px 16px}.actions{flex-direction:row;flex-wrap:nowrap;gap:6px}.btn{flex:1 1 0;min-width:0;width:auto;padding:10px 4px;min-height:42px;font-size:clamp(10px,2.8vw,12px)}footer{margin-top:36px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
 </style>
 </head>
