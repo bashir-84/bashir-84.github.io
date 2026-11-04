@@ -8,40 +8,45 @@
 <title>404 — Page Not Found | Bashir Amri</title>
 <meta name="description" content="This page could not be found. Return to Bashir Amri's homepage.">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap');
-:root{color-scheme:light;--paper:#f5f4f0;--ink:#17191e;--muted:#737780;--line:#deded9}
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&family=DM+Sans:wght@400;600;700;900&display=swap');
+:root{color-scheme:dark;--green:#00ff78;--bg:#020806;--ink:#effff5;--muted:#a0b5a9}
 *{box-sizing:border-box}
-html{min-height:100%}
-body{margin:0;min-height:100svh;background:var(--paper);color:var(--ink);font-family:'DM Sans',Arial,sans-serif}
-body::before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 50% 38%,#fff 0%,transparent 65%)}
-main{position:relative;min-height:100svh;display:flex;align-items:center;justify-content:center;padding:48px 22px}
-.panel{width:min(100%,680px);text-align:center;animation:appear .65s ease-out both}
-.kicker{font-size:11px;letter-spacing:.28em;font-weight:700;color:#85888e;text-transform:uppercase}
-.number{font-family:'Playfair Display',Georgia,serif;font-weight:500;font-size:clamp(110px,24vw,220px);line-height:1.08;letter-spacing:-.09em;margin:14px 0 10px}
-h1{font-size:clamp(22px,4vw,34px);font-weight:600;letter-spacing:-.04em;margin:0 0 12px}
-.desc{font-size:15px;color:var(--muted);line-height:1.8;margin:0 auto;max-width:460px}
-.fa{font-family:'Vazirmatn',Tahoma,sans-serif;direction:rtl;font-size:14px;margin-top:12px}
-.actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:36px}
-.btn{min-height:48px;display:inline-flex;align-items:center;justify-content:center;padding:12px 22px;border-radius:13px;text-decoration:none;font:500 14px 'Vazirmatn',Tahoma,sans-serif;transition:transform .2s,background .2s;border:1px solid var(--ink);cursor:pointer}
-.btn:hover{transform:translateY(-2px)}
-.primary{background:var(--ink);color:#fff}
-.primary:hover{background:#34383f}
-.secondary{background:transparent;color:var(--ink)}
-.secondary:hover{background:#fff}
-footer{margin-top:62px;color:#92949a;font-size:11px;letter-spacing:.1em}
-@keyframes appear{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
-@media(max-width:440px){main{padding:32px 20px}.actions{flex-direction:column}.btn{width:100%}footer{margin-top:48px}}
-@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+html{min-height:100%;background:var(--bg)}
+body{margin:0;min-height:100svh;background:radial-gradient(ellipse at 50% 32%,#07341d 0%,#020806 55%,#000 100%);color:var(--ink);font-family:'Vazirmatn',Tahoma,sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.16;background:repeating-linear-gradient(0deg,transparent 0 3px,#00ff781c 4px 5px);z-index:4}
+body:after{content:"";position:fixed;inset:0;pointer-events:none;background:linear-gradient(90deg,transparent 49.9%,#00ff7812 50%,transparent 50.1%),linear-gradient(transparent 49.9%,#00ff7810 50%,transparent 50.1%);background-size:54px 54px;mask-image:linear-gradient(transparent 20%,#000 100%);opacity:.4}
+main{position:relative;z-index:2;min-height:100svh;display:flex;align-items:center;justify-content:center;padding:55px 20px 70px}
+.panel{position:relative;width:min(100%,920px);text-align:center;animation:appear .65s ease-out both}
+.kicker{font:700 11px 'DM Sans',sans-serif;letter-spacing:.3em;color:var(--green);text-transform:uppercase}
+.number{position:relative;display:inline-block;font:900 clamp(120px,26vw,270px)/1 'DM Sans',sans-serif;letter-spacing:-.085em;color:#eafff1;text-shadow:3px 0 var(--green),-3px 0 #00a65a,0 0 38px #00ff7855;margin:20px 0 22px;animation:glitch 6s infinite}
+.number:before,.number:after{content:attr(data-text);position:absolute;inset:0;pointer-events:none}
+.number:before{color:var(--green);clip-path:inset(24% 0 64% 0);transform:translate(6px,-2px);animation:tear 4s steps(1,end) infinite}
+.number:after{color:#caffdd;clip-path:inset(72% 0 16% 0);transform:translate(-5px,3px);animation:tear 3.3s steps(1,end) infinite reverse}
+h1{font-size:clamp(26px,5vw,40px);margin:0 0 20px;font-weight:700;letter-spacing:-.03em}
+.desc{font-size:14px;color:var(--muted);line-height:2;margin:0 auto;max-width:680px}
+.fa{direction:rtl;font-size:15px;line-height:2.1;color:#d5e9db;margin:0 auto;max-width:650px}
+.explanation{border:1px solid #00ff7866;background:#001b1088;padding:22px 28px;margin:28px auto 0;max-width:760px;box-shadow:0 0 24px #00ff7814;clip-path:polygon(12px 0,100% 0,100% calc(100% - 12px),calc(100% - 12px) 100%,0 100%,0 12px)}
+.actions{display:flex;justify-content:center;flex-wrap:wrap;gap:14px;margin-top:36px;direction:rtl}
+.btn{min-width:185px;min-height:54px;display:inline-flex;align-items:center;justify-content:center;padding:13px 24px;text-decoration:none;font:600 15px 'Vazirmatn',Tahoma,sans-serif;transition:transform .2s,box-shadow .2s,background .2s;border:1px solid var(--green);color:#f2fff6;background:#00180d;clip-path:polygon(12px 0,100% 0,100% calc(100% - 12px),calc(100% - 12px) 100%,0 100%,0 12px)}
+.btn:hover,.btn:focus-visible{transform:translateY(-3px);box-shadow:0 0 25px #00ff7866;background:#064b2b;outline:2px solid var(--green);outline-offset:3px}
+.primary{background:var(--green);color:#001609;box-shadow:0 0 24px #00ff7855}
+.primary:hover,.primary:focus-visible{background:#8dffbb;color:#001609}
+footer{margin-top:55px;color:#508367;font:600 11px 'DM Sans',sans-serif;letter-spacing:.18em}
+@keyframes appear{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@keyframes glitch{0%,94%,97%,100%{transform:translateX(0)}95%{transform:translateX(-3px)}96%{transform:translateX(4px)}}
+@keyframes tear{0%,90%,100%{opacity:0}91%,94%{opacity:1}92%{transform:translate(9px,-3px)}93%{transform:translate(-7px,3px)}}
+@media(max-width:600px){main{padding:44px 18px 50px}.number{margin:18px 0}.explanation{padding:18px 16px}.actions{flex-direction:column;align-items:stretch}.btn{width:100%}footer{margin-top:36px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
 <main>
 <section class="panel" aria-labelledby="title">
 <div class="kicker">Lost in the right direction</div>
-<div class="number" aria-hidden="true">404</div>
-<h1 id="title">This page doesn't exist.</h1>
-<p class="desc">The link may have changed, or the page you're looking for has moved.</p>
-<p class="desc fa" lang="fa">خطای ۴۰۴ یعنی سرور در دسترس است، اما صفحه‌ای با این آدرس پیدا نشده است. ممکن است لینک را اشتباه وارد کرده باشید، یا صفحه حذف شده یا نشانی آن تغییر کرده باشد.</p>
+<div class="number" data-text="404" aria-hidden="true">404</div>
+<h1 id="title" lang="fa" dir="rtl">صفحه پیدا نشد</h1>
+
+<div class="explanation"><p class="desc fa" lang="fa">خطای ۴۰۴ یعنی سرور در دسترس است، اما صفحه‌ای با این آدرس پیدا نشده است. ممکن است لینک را اشتباه وارد کرده باشید، یا صفحه حذف شده یا نشانی آن تغییر کرده باشد.</p></div>
 <nav class="actions" aria-label="Navigation">
 <a class="btn primary" href="https://bashiramri.ir/">سایت اصلی</a>
 <a class="btn secondary" href="https://bashiramri.ir/BioLink/">اطلاعات من</a>
