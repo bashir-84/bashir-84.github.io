@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f5f4f0">
+<meta name="robots" content="noindex,follow">
+<title>404 — Page Not Found | Bashir Amri</title>
+<meta name="description" content="This page could not be found. Return to Bashir Amri's homepage.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap');
+:root{color-scheme:light;--paper:#f5f4f0;--ink:#17191e;--muted:#737780;--line:#deded9}
+*{box-sizing:border-box}
+html{min-height:100%}
+body{margin:0;min-height:100svh;background:var(--paper);color:var(--ink);font-family:'DM Sans',Arial,sans-serif}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 50% 38%,#fff 0%,transparent 65%)}
+main{position:relative;min-height:100svh;display:flex;align-items:center;justify-content:center;padding:48px 22px}
+.panel{width:min(100%,680px);text-align:center;animation:appear .65s ease-out both}
+.kicker{font-size:11px;letter-spacing:.28em;font-weight:700;color:#85888e;text-transform:uppercase}
+.number{font-family:'Playfair Display',Georgia,serif;font-weight:500;font-size:clamp(110px,24vw,220px);line-height:1.08;letter-spacing:-.09em;margin:14px 0 10px}
+h1{font-size:clamp(22px,4vw,34px);font-weight:600;letter-spacing:-.04em;margin:0 0 12px}
+.desc{font-size:15px;color:var(--muted);line-height:1.8;margin:0 auto;max-width:460px}
+.fa{font-family:'Vazirmatn',Tahoma,sans-serif;direction:rtl;font-size:14px;margin-top:12px}
+.actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:36px}
+.btn{min-height:48px;display:inline-flex;align-items:center;justify-content:center;padding:12px 22px;border-radius:13px;text-decoration:none;font:600 13px 'DM Sans',sans-serif;transition:transform .2s,background .2s;border:1px solid var(--ink);cursor:pointer}
+.btn:hover{transform:translateY(-2px)}
+.primary{background:var(--ink);color:#fff}
+.primary:hover{background:#34383f}
+.secondary{background:transparent;color:var(--ink)}
+.secondary:hover{background:#fff}
+footer{margin-top:62px;color:#92949a;font-size:11px;letter-spacing:.1em}
+@keyframes appear{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:440px){main{padding:32px 20px}.actions{flex-direction:column}.btn{width:100%}footer{margin-top:48px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<main>
+<section class="panel" aria-labelledby="title">
+<div class="kicker">Lost in the right direction</div>
+<div class="number" aria-hidden="true">404</div>
+<h1 id="title">This page doesn't exist.</h1>
+<p class="desc">The link may have changed, or the page you're looking for has moved.</p>
+<p class="desc fa" lang="fa">این صفحه پیدا نشد؛ شاید آدرس تغییر کرده یا صفحه جابه‌جا شده باشد.</p>
+<nav class="actions" aria-label="Navigation">
+<a class="btn primary" href="/">Back to homepage / صفحه اصلی</a>
+<button class="btn secondary" id="back" type="button">Go back / بازگشت</button>
+</nav>
+<footer>BASHIR AMRI &nbsp;·&nbsp; ERROR 404</footer>
+</section>
+</main>
+<script>
+document.getElementById('back').addEventListener('click',function(){
+  if(history.length>1 && document.referrer){history.back()}else{location.href='/'}
+});
+</script>
+</body>
+</html>
