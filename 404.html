@@ -25,10 +25,10 @@ main{position:relative;z-index:2;min-height:100svh;display:flex;align-items:cent
 h1{font-size:clamp(26px,5vw,40px);margin:0 0 20px;font-weight:700;letter-spacing:-.03em}
 .desc{font-size:14px;color:var(--muted);line-height:2;margin:0 auto;max-width:680px}
 .fa{direction:rtl;font-size:15px;line-height:2.1;color:#d5e9db;margin:0 auto;max-width:650px}
-.explanation{border:1px solid #00ff7866;background:#001b1088;padding:22px 28px;margin:28px auto 0;max-width:760px;box-shadow:0 0 24px #00ff7814;border-radius:22px}
+.english-title{font:600 17px/1.6 "DM Sans",sans-serif;color:var(--green);margin:0 0 10px}.english-desc{margin-top:14px;padding-top:14px;border-top:1px solid #00ff7830;font:400 13px/1.8 "DM Sans",sans-serif;color:#a9cbb6}.explanation{border:1px solid #00ff7866;background:#001b1088;padding:22px 28px;margin:28px auto 0;max-width:760px;box-shadow:0 0 24px #00ff7814;border-radius:22px}
 .actions{display:flex;justify-content:center;flex-wrap:wrap;gap:14px;margin-top:36px;direction:rtl}
 .btn{min-width:185px;min-height:54px;display:inline-flex;align-items:center;justify-content:center;padding:13px 24px;text-decoration:none;font:600 15px 'Vazirmatn',Tahoma,sans-serif;transition:transform .2s,box-shadow .2s,background .2s;border:1px solid var(--green);color:#f2fff6;background:#00180d;border-radius:999px;white-space:nowrap}
-.btn:hover,.btn:focus-visible{transform:translateY(-3px);box-shadow:0 0 25px #00ff7866;background:#064b2b;outline:2px solid var(--green);outline-offset:3px}
+.btn{flex-direction:column;gap:1px}.btn small{font:500 10px/1.2 "DM Sans",sans-serif;opacity:.78}.btn:hover,.btn:focus-visible{transform:translateY(-3px);box-shadow:0 0 25px #00ff7866;background:#064b2b;outline:2px solid var(--green);outline-offset:3px}
 .primary{background:var(--green);color:#001609;box-shadow:0 0 24px #00ff7855}
 .primary:hover,.primary:focus-visible{background:#8dffbb;color:#001609}
 footer{margin-top:55px;color:#508367;font:600 11px 'DM Sans',sans-serif;letter-spacing:.18em}
@@ -45,12 +45,13 @@ footer{margin-top:55px;color:#508367;font:600 11px 'DM Sans',sans-serif;letter-s
 <div class="kicker">Lost in the right direction</div>
 <div class="number" data-text="404" aria-hidden="true">404</div>
 <h1 id="title" lang="fa" dir="rtl">صفحه پیدا نشد</h1>
+<p class="english-title" lang="en">Page Not Found</p>
 
-<div class="explanation"><p class="desc fa" lang="fa">خطای ۴۰۴ یعنی سرور در دسترس است، اما صفحه‌ای با این آدرس پیدا نشده است. ممکن است لینک را اشتباه وارد کرده باشید، یا صفحه حذف شده یا نشانی آن تغییر کرده باشد.</p></div>
+<div class="explanation"><p class="desc fa" lang="fa">خطای ۴۰۴ یعنی سرور در دسترس است، اما صفحه‌ای با این آدرس پیدا نشده است. ممکن است لینک را اشتباه وارد کرده باشید، یا صفحه حذف شده یا نشانی آن تغییر کرده باشد.</p><p class="desc english-desc" lang="en" dir="ltr">Error 404 means the server is reachable, but the requested page could not be found. The address may be incorrect, or the page may have been moved or deleted.</p></div>
 <nav class="actions" aria-label="Navigation">
-<a class="btn primary" href="https://bashiramri.ir/">سایت اصلی</a>
-<a class="btn secondary" href="https://bashiramri.ir/BioLink/">اطلاعات من</a>
-<a class="btn secondary" href="https://bashiramri.ir/Alfalink/">پروژه‌های من</a>
+<a class="btn primary" href="https://bashiramri.ir/"><span>سایت اصلی</span><small>Home</small></a>
+<a class="btn secondary" href="https://bashiramri.ir/BioLink/"><span>اطلاعات من</span><small>About me</small></a>
+<a class="btn secondary" href="https://bashiramri.ir/Alfalink/"><span>پروژه‌های من</span><small>My projects</small></a>
 </nav>
 <footer>BASHIR AMRI &nbsp;·&nbsp; ERROR 404</footer>
 </section>
